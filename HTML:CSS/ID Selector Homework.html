@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .target_1 {
+            background-color: darkred;
+            color: white;
+        }
+        
+        #target_2 {
+            width: 100%;
+            padding: 50px 0;
+            text-align: center;
+            background-color: yellow;
+        }
+        
+        .textfield_1 {
+            border-radius: 14px;
+            border: dotted darkblue;
+            margin: auto;
+            height: auto;
+        }
+    </style>
+
+    <body>
+        <p>Find an div element with the ID of "target_1". Change the background color darkred and it's font color white.</p>
+        <div id="target_1">Target_1</div>
+        <button onclick="myFunctionC()">change background color and font</button>
+
+        <p>Find a DOM element with the ID of "target_2" and hide it</p>
+        <div id="target_2">This is "target_2"</div>
+        <button onclick="myFunction()">hide the text</button>
+
+        <p>Find the element with an ID of "textfield_1 " and give it a darkblue, dotted, rounded border. (Give it a rounded border of about 14px)</p>
+        <div id="textfield_1">This is "textfield_1"</div>
+        <button onclick="myFunctionB()">border</button>
+
+
+        <script>
+            function myFunction() {
+                var x = document.getElementById("target_2");
+                if (x.style.display === "none") {
+                    x.style.display = "block";
+                } else {
+                    x.style.display = "none";
+                }
+            }
+
+            function myFunctionC() {
+                var element = document.body;
+                element.classList.toggle("target_1");
+            }
+
+
+            function myFunctionB() {
+                var element = document.getElementById("textfield_1");
+                element.classList.toggle("textfield_1");
+            }
+        </script>
+
+
+    </body>
+
+</html>

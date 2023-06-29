@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <br>name : <input type="text" name="user_id" />
+        <div></div>
+        <br> email: <input type="text" name="user_id" />
+        <div></div>
+        <br>subject : <input type="text" name="user_id" />
+        <div></div>
+        <br>message : <input type="text" name="user_id" />
+    </form>
+
+
+    <script>
+        // if something goes wrong thos script couldn't be submitted ...
+        $("text").submit(function(e) {
+                    var validationFailed = false;
+                    // do your validation here ...
+                    if (validationFailed) {
+                        e.preventDefault();
+                        return false;
+                    }
+    </script>
+</body>
+
+</html>

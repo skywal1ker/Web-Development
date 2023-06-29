@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media querries</title>
+
+
+    <style>
+                .child1 {
+            width: 200px;
+            height: 650px;
+            background-color: red;
+            margin-bottom: 5px;
+        }
+        
+        .child2 {
+            width: 200px;
+            height: 100px;
+            background-color: green;
+            margin-bottom: 5px;
+            display: flex;
+            justify-content: center;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .child1 {
+                margin: 0 auto;
+                margin-bottom: 5px;
+                text-align: center;
+            }
+            .child2 {
+                margin: 0 auto;
+                margin-bottom: 5px;
+                text-align: center;
+            }
+            @media screen and (max-width: 703px) {
+                body {
+                    background-color: cornsilk;
+                }
+    </style>
+
+
+</head>
+
+<body>
+    <style>
+            @media screen and (orientation: landscape) {
+            body {
+                background-color: black;
+                color: white;
+            }
+            .child1 {
+                margin: 0 auto;
+                margin-bottom: 5px;
+                text-align: center;
+                background-color: blue;
+            }
+            .child2 {
+                margin: 0 auto;
+                margin-bottom: 5px;
+                text-align: center;
+                background-color: grey;
+            }
+    </style>
+    <div class="container1">
+        <div class="child1">DIV1</div>
+    </div>
+
+
+    <div class="container2">
+        <div class="child2">DIV2</div>
+        <div class="child2">DIV3</div>
+        <div class="child2">DIV4</div>
+        <div class="child2">DIV5</div>
+    </div>
+</body>
+
+</html>

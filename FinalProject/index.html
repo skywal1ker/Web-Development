@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script type="text/javascript" src="/js/script.js"></script>
+    <script type="module" src="/js/script.js"></script>
+<script src="/js/script.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+	  <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="topnav" id="myTopnav">
+        <a href="index.html" class="active">Home</a>
+        <a href="news.html">News</a>
+        <a href="contact.html">Contact</a>
+        <a href="calendar.html">Calendar</a>
+        <a href="cinema.html">Cinema</a>
+        <a href="about.html">About</a>
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+      </div>
+      
+      <div style="padding-left:16px">
+        <h2>Welcome to my page!!!</h2>
+        <p>My name is Iztore Kargabayev and my major is Software Development</p>
+        <p>Currently I am graduate student of Boston University</p>
+      </div>
+
+
+
+      <div class="row"> 
+        <div class="column">
+          <img src="/img/mist.jpg" style="width:100%">
+          <img src="/img/falls2.jpg" style="width:100%">
+          <img src="/img/paris.jpg" style="width:100%">
+          <img src="/img/nature.jpg" style="width:100%">
+          <img src="/img/mist.jpg" style="width:100%">
+          <img src="/img/paris.jpg" style="width:100%">
+        </div>
+        <div class="column">
+          <img src="/img/underwater.jpg" style="width:100%">
+          <img src="/img/ocean.jpg" style="width:100%">
+          <img src="/img/wedding.jpg" style="width:100%">
+          <img src="/img/mountainskies.jpg" style="width:100%">
+          <img src="/img/rocks.jpg" style="width:100%">
+          <img src="/img/underwater.jpg" style="width:100%">
+        </div>  
+        <div class="column">
+          <img src="/img/wedding.jpg" style="width:100%">
+          <img src="/img/rocks.jpg" style="width:100%">
+          <img src="/img/falls2.jpg" style="width:100%">
+          <img src="/img/paris.jpg" style="width:100%">
+          <img src="/img/nature.jpg" style="width:100%">
+          <img src="/img/mist.jpg" style="width:100%">
+          <img src="/img/paris.jpg" style="width:100%">
+        </div>
+        <div class="column">
+          <img src="/img/underwater.jpg" style="width:100%">
+          <img src="/img/ocean.jpg" style="width:100%">
+          <img src="/img/wedding.jpg" style="width:100%">
+          <img src="/img/mountainskies.jpg" style="width:100%">
+          <img src="/img/rocks.jpg" style="width:100%">
+          <img src="/img/underwater.jpg" style="width:100%">
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>
+  
+
+      <div class="container1">
+        <div id="time">
+          <div class="circle" style="--color: #ff2972">
+            <div class="dots h_dot"></div>
+            <svg>
+              <circle cx="70" cy="70" r="70"></circle>
+              <circle cx="70" cy="70" r="70" id="hh"></circle>
+            </svg>
+            <div id="hours">00</div>
+          </div>
+          <div class="circle" style="--color: #fee800">
+            <div class="dots m_dot"></div>
+            <svg>
+              <circle cx="70" cy="70" r="70"></circle>
+              <circle cx="70" cy="70" r="70" id="mm"></circle>
+            </svg>
+            <div id="minutes">00</div>
+          </div>
+          <div class="circle" style="--color: #04fc43">
+            <div class="dots s_dot"></div>
+            <svg>
+              <circle cx="70" cy="70" r="70"></circle>
+              <circle cx="70" cy="70" r="70" id="ss"></circle>
+            </svg>
+            <div id="seconds">00</div>
+          </div>
+          <div class="ap">
+            <div id="ampm">AM</div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+<script>
+  setInterval(() => {
+  // get time indicator elements
+  let hours = document.getElementById('hours');
+  let minutes = document.getElementById('minutes');
+  let secondes = document.getElementById('seconds');
+  let ampm = document.getElementById('ampm');
+
+  // digits time indicator
+  let hh = document.getElementById('hh');
+  let mm = document.getElementById('mm');
+  let ss = document.getElementById('ss');
+
+
+  // dot time indicator
+  let dotH = document.querySelector('.h_dot');
+  let dotM = document.querySelector('.m_dot');
+  let dotS = document.querySelector('.s_dot');
+
+  // get current time
+  let h = new Date().getHours();
+  let m = new Date().getMinutes();
+  let s = new Date().getSeconds();
+  let ap = h >= 12 ? 'PM' : 'AM';
+
+  // convert to 12 hour format
+  if (h > 12) {
+    h = h - 12;
+  }
+
+  // add 0 before single digit
+  h = h < 10 ? '0' + h : h;
+  m = m < 10 ? '0' + m : m;
+  s = s < 10 ? '0' + s : s;
+
+  // set time and label
+  hours.innerHTML = h + '<br /><span>Hours</span>';
+  minutes.innerHTML = m + '<br /><span>Minutes</span>';
+  secondes.innerHTML = s + '<br /><span>Seconds</span>';
+  ampm.innerHTML = ap;
+
+  // set time circular indicator
+  hh.style.strokeDashoffset = 440 - (440 * h) / 12;
+  mm.style.strokeDashoffset = 440 - (440 * m) / 60;
+  ss.style.strokeDashoffset = 440 - (440 * s) / 60;
+
+  // set dot time position indicator
+  dotH.style.transform = `rotate(${h * 30}deg)`;
+  dotM.style.transform = `rotate(${m * 6}deg)`;
+  dotS.style.transform = `rotate(${s * 6}deg)`;
+}, 1000);
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+      
+      <footer class="footer-distributed">
+        <div class="footer-left">
+          <p class="footer-links">
+            <a href="#">Home</a>
+            |
+            <a href="#">News</a>
+            |
+            <a href="#">Contact</a>
+            |
+            <a href="#">Dropdown</a>
+            |
+            <a href="#">About</a>
+          </p>
+          <p class="footer-company-name">© 2022 Created by Iztore Kargabayev</p>
+        </div>
+        <div class="footer-center">
+          <div>
+            <i class="fa fa-map-marker"></i>
+              <p><span>42 Orchard Road
+
+              Boston, MA, USA</p>
+          </div>
+          <div>
+            <i class="fa fa-phone"></i>
+            <p>+1 (617) 412 7879</p>
+          </div>
+          <div>
+            <i class="fa fa-envelope"></i>
+            <p><a href="mailto:ik11@bu.edu">ik11@bu.edu</a></p>
+          </div>
+        </div>
+        <div class="footer-right">
+          <p class="footer-company-about">
+            <span>About me</span>
+            You can find via these links</p>
+          <div class="footer-icons">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-youtube"></i></a>
+          </div>
+        </div>
+      </footer>
+
+</body>
+</html>

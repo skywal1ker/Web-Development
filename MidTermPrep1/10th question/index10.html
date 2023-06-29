@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>jQuery UI Datepicker functionality</title>
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+    <!-- Javascript -->
+    <script>
+        $(function() {
+            $("#datepicker-13").datepicker();
+            $("#datepicker-13").datepicker("show");
+
+        });
+        $(function() {
+            $("#datepicker-14").datepicker();
+            $("#datepicker-14").datepicker("show");
+
+        });
+
+
+        $("#datepicker-13").datepicker("getdate"); //to get the date
+        var dateGo;
+        dateGo = $("#datepicker-13").datepicker("getdate"); //to store it in a variable.
+
+
+        $("#datepicker-14").datepicker("getdate"); //to get the date
+        var dateBack;
+        dateBack = $("#datepicker-14").datepicker("getdate"); //to store it in a variable.
+
+
+
+        if (dateGo > dateBack) {
+            alert("This is wrong type, please repick again");
+
+        } else if (dateBack > 30 > dateGo) {
+            alert("You have a 30+ day duration");
+
+        } else if (dateBack == dateGo) {
+            alert("It appears you are coming back on the same day as your departure");
+
+        } else if (dateBack == 365) {
+            alert("It appears your travel is greater then 1 year");
+
+        } else {
+            greeting = "Good evening";
+        }
+    </script>
+</head>
+
+<body>
+    <!-- HTML -->
+    <p>Departure Date: <input type="text" id="datepicker-13"></p>
+    <p>Return Date: <input type="text" id="datepicker-14"></p>
+</body>
+
+</html>

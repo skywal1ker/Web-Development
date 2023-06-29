@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div>
+        <p>I am hidden </p>
+    </div>
+
+    <h1 id="demo"></h1>
+
+    <script>
+        const myPromise = new Promise(function(myResolve, myReject) {
+            setTimeout(function() {
+                myResolve("Hidden Div");
+            }, 2000);
+        });
+
+        myPromise.then(function(value) {
+            document.getElementById("demo").innerHTML = value;
+        });
+    </script>
+    </script>
+</body>
+
+</html>

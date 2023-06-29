@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>jQuery.each demo</title>
+    <style>
+        div {
+            color: blue;
+        }
+        
+        div#five {
+            color: red;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+
+<body>
+    <p id="demo1">Click me.</p>
+    <p id="demo2">Click me.</p>
+    <p id="demo3">Click me.</p>
+    <p id="demo4">Click me.</p>
+    <p id="demo5">Click me.</p>
+    <script>
+        document.getElementById("demo1").onclick = function() {
+            myFunction1()
+        };
+
+        function myFunction1() {
+            document.getElementById("demo1").innerHTML = `YOU CLICKED ME! this is p1 + today is ${cd}`;
+        }
+
+
+
+
+        document.getElementById("demo2").onclick = function() {
+            myFunction2()
+        };
+
+        function myFunction2() {
+            document.getElementById("demo2").innerHTML = `YOU CLICKED ME! this is p2 + today is ${cd}`;
+        }
+
+
+
+
+
+        document.getElementById("demo3").onclick = function() {
+            myFunction3()
+        };
+
+        function myFunction3() {
+            document.getElementById("demo3").innerHTML = `YOU CLICKED ME! this is p3 + today is ${cd}`;
+        }
+
+
+
+
+        document.getElementById("demo4").onclick = function() {
+            myFunction4()
+        };
+
+        function myFunction4() {
+            document.getElementById("demo4").innerHTML = `YOU CLICKED ME! this is p4 + today is ${cd}`;
+        }
+
+        document.getElementById("demo5").onclick = function() {
+            myFunction5()
+        };
+
+        function myFunction5() {
+            document.getElementById("demo5").innerHTML = `YOU CLICKED ME! this is p5 + today is ${cd}`;
+        }
+    </script>
+
+    <div id="one"></div>
+    <div id="two"></div>
+    <div id="three"></div>
+    <div id="four"></div>
+    <div id="five"></div>
+
+    <script>
+        var arr = ["one", "two", "three", "four", "five"];
+        var obj = {
+            one: 1,
+            two: 2,
+            three: 3,
+            four: 4,
+            five: 5
+        };
+
+        jQuery.each(arr, function(i, val) {
+            cd = (new Date()).toISOString().split('T')[0];
+            $("#" + val).text(`Today is ` + val + ".");
+
+            // Will stop running after "three"
+            return (val !== "five");
+        });
+
+
+        var i = 0;
+        $("div")
+            .mouseover(function() {
+                i += 1;
+                console.log(`at ${cd} This is div_1 - div5`);
+            })
+        jQuery.each(obj, function(i, val) {
+            $("#" + i).append(document.createTextNode(" - " + val));
+        });
+    </script>
+
+
+
+
+
+</body>
+
+</html>

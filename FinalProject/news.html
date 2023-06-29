@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script type="text/javascript" type="module" src="/js/script.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+	  <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+    <script type="module" src="/js/script.js"></script>
+</head>
+<body>
+    <div class="topnav" id="myTopnav">
+        <a href="/index.html" >Home</a>
+        <a class="active" href="/news.html" >News</a>
+        <a href="contact.html">Contact</a>
+        <a href="calendar.html">Calendar</a>
+        <a href="cinema.html">Cinema</a>
+        <a href="about.html">About</a>
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+      </div>
+            
+      <h2>You can find here film news</h2>
+
+      <p>Main film:</p>
+      <button type="button" class="collapsible">Latest News!!!!</button>
+      <div class="content">
+        <h1>Coming Movie</h1>
+        <h3>Hover over the image below:</h3>
+        <h1>Download this Movie </h1>
+<div id="myProgress">
+<div id="myBar"></div>
+</div>
+<br>
+<button onclick="move()">Click for Download</button> 
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            
+            <div class="flip-card-front">
+              <img src="/img/rocks.jpg" alt="Avatar" style="width:300px;height:300px;">
+            </div>
+            
+            <div class="flip-card-back">
+              
+              <h1>PARKER</h1> 
+              <p>Jason Statham and Jennifer Lopez</p> 
+              <p>Action</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      
+      <p>Previous updates:</p>
+      <button type="button" class="collapsible">This last film</button>
+      <div class="content">
+        <h1>Previous Video</h1>
+<h3>Hover over the image below:</h3>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="/img/mountainskies.jpg" alt="Avatar" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>The Fast and the Furious</h1> 
+      <p>Vin Diesel</p> 
+      <p>Action</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="/img/ocean.jpg" alt="Avatar" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>Godzilla vs. Kong</h1> 
+      <p>Big Monkey and Dinozour</p> 
+      <p>Fantastic Action</p>
+    </div>
+  </div>
+</div>
+
+      </div>
+      <button type="button" class="collapsible">Most Popular Films</button>
+      <div class="content">
+        <div class="slideshow-container">
+
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="/img/paris.jpg" style="width:100%">
+            <div class="text">Caption Text</div>
+          </div>
+          
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="/img/rocks.jpg" style="width:100%">
+            <div class="text">Caption Two</div>
+          </div>
+          
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="/img/underwater.jpg" style="width:100%">
+            <div class="text">Caption Three</div>
+          </div>
+          
+          <a class="prev" onclick="plusSlides(-1)">❮</a>
+          <a class="next" onclick="plusSlides(1)">❯</a>
+          
+          </div>
+          <br>
+          
+          <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span> 
+          </div>
+        
+      </div>
+      <button type="button" class="collapsible">Here Watch list to do </button>
+      <div class="content">
+        <div id="myDIV" class="header">
+          <h2 style="margin:5px">My Movie List</h2>
+          <input type="text" id="myInput" placeholder="Title...">
+          <span onclick="newElement()" class="addBtn">Add</span>
+        </div>
+        
+        <ul id="myUL">
+          <li>Terminator</li>
+          <li class="checked">Robocop</li>
+          <li>Equalizer</li>
+          <li>Batman</li>
+          <li>Superman</li>
+          <li>Spiderman</li>
+        </ul>
+        
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+
+
+
+
+
+      
+      <footer class="footer-distributed">
+        <div class="footer-left">
+          <p class="footer-links">
+            <a href="#">Home</a>
+            |
+            <a href="#">News</a>
+            |
+            <a href="#">Contact</a>
+            |
+            <a href="#">Dropdown</a>
+            |
+            <a href="#">About</a>
+          </p>
+          <p class="footer-company-name">© 2022 Created by Iztore Kargabayev</p>
+        </div>
+        <div class="footer-center">
+          <div>
+            <i class="fa fa-map-marker"></i>
+              <p><span>42 Orchard Road
+              Boston, MA, USA</p>
+          </div>
+          <div>
+            <i class="fa fa-phone"></i>
+            <p>+1 (617) 412 7879</p>
+          </div>
+          <div>
+            <i class="fa fa-envelope"></i>
+            <p><a href="mailto:ik11@bu.edu">ik11@bu.edu</a></p>
+          </div>
+        </div>
+        <div class="footer-right">
+          <p class="footer-company-about">
+            <span>About me</span>
+            You can find via these links</p>
+          <div class="footer-icons">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-youtube"></i></a>
+          </div>
+        </div>
+      </footer>
+
+</body>
+</html>

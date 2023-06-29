@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> <link rel="stylesheet" href="/css/style2.css">
+    <style>
+        body {margin:0;font-family:Arial}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.active {
+  background-color: red;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 17px;    
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: #555;
+  color: white;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .dropdown {float: none;}
+  .topnav.responsive .dropdown-content {position: relative;}
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+
+
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+*{
+	padding:0;
+	margin:0;
+}
+
+html{
+	background-color: #eaf0f2;
+}
+
+body{
+	font:16px/1.6 Arial,  sans-serif;
+}
+
+header{
+	text-align: center;
+	padding-top: 100px;
+	margin-bottom:190px;
+}
+
+header h1{
+	font: normal 32px/1.5 'Open Sans', sans-serif;
+	color: #3F71AE;
+	padding-bottom: 16px;
+}
+
+header h2{
+	color: #F05283;
+}
+
+header span{
+	color: #3F71EA;
+}
+
+
+footer{
+	bottom: 0;
+}
+
+@media (max-height:800px){
+	footer { position: static; }
+	header { padding-top:40px; }
+}
+
+
+.footer-distributed{
+	background-color: #2c292f;
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 50px 50px 60px 50px;
+	margin-top: 80px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	width: 30%;
+}
+
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Cookie', cursive;
+	margin: 0;
+}
+
+
+.footer-distributed .footer-left img{
+	width: 30%;
+}
+
+.footer-distributed h3 span{
+	color:  #e0ac1c;
+}
+
+
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+
+.footer-distributed .footer-center{
+	width: 35%;
+}
+
+
+.footer-distributed .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+	color:  #e0ac1c;
+	text-decoration: none;;
+}
+
+
+
+.footer-distributed .footer-right{
+	width: 30%;
+}
+
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+
+@media (max-width: 880px) {
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+
+}
+
+    </style>
+</head>
+<body>
+    <div class="topnav" id="myTopnav">
+        <a href="index.html" class="active">Home</a>
+        <a href="news.html">News</a>
+        <a href="contact.html">Contact</a>
+        <a class="active" href="calendar.html">Calendar</a>
+        <a href="cinema.html">Cinema</a>
+        <a href="about.html">About</a>
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+      </div>
+
+
+
+<div id="calendar"></div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="footer-distributed">
+    <div class="footer-left">
+      <p class="footer-links">
+        <a href="#">Home</a>
+        |
+        <a href="#">News</a>
+        |
+        <a href="#">Contact</a>
+        |
+        <a href="#">Dropdown</a>
+        |
+        <a href="#">About</a>
+      </p>
+      <p class="footer-company-name">© 2022 Created by Iztore Kargabayev</p>
+    </div>
+    <div class="footer-center">
+      <div>
+        <i class="fa fa-map-marker"></i>
+          <p><span>42 Orchard Road
+
+          Boston, MA, USA</p>
+      </div>
+      <div>
+        <i class="fa fa-phone"></i>
+        <p>+1 (617) 412 7879</p>
+      </div>
+      <div>
+        <i class="fa fa-envelope"></i>
+        <p><a href="mailto:ik11@bu.edu">ik11@bu.edu</a></p>
+      </div>
+    </div>
+    <div class="footer-right">
+      <p class="footer-company-about">
+        <span>About me</span>
+        You can find via these links</p>
+      <div class="footer-icons">
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <a href="#"><i class="fa fa-youtube"></i></a>
+      </div>
+    </div>
+  </footer>
+
+
+<script>
+    !function() {
+
+var today = moment();
+
+function Calendar(selector, events) {
+  this.el = document.querySelector(selector);
+  this.events = events;
+  this.current = moment().date(1);
+  this.draw();
+  var current = document.querySelector('.today');
+  if(current) {
+    var self = this;
+    window.setTimeout(function() {
+      self.openDay(current);
+    }, 500);
+  }
+}
+
+Calendar.prototype.draw = function() {
+  //Create Header
+  this.drawHeader();
+
+  //Draw Month
+  this.drawMonth();
+
+  this.drawLegend();
+}
+
+Calendar.prototype.drawHeader = function() {
+  var self = this;
+  if(!this.header) {
+    //Create the header elements
+    this.header = createElement('div', 'header');
+    this.header.className = 'header';
+
+    this.title = createElement('h1');
+
+    var right = createElement('div', 'right');
+    right.addEventListener('click', function() { self.nextMonth(); });
+
+    var left = createElement('div', 'left');
+    left.addEventListener('click', function() { self.prevMonth(); });
+
+    //Append the Elements
+    this.header.appendChild(this.title); 
+    this.header.appendChild(right);
+    this.header.appendChild(left);
+    this.el.appendChild(this.header);
+  }
+
+  this.title.innerHTML = this.current.format('MMMM YYYY');
+}
+
+Calendar.prototype.drawMonth = function() {
+  var self = this;
+  
+  this.events.forEach(function(ev) {
+   ev.date = self.current.clone().date(Math.random() * (29 - 1) + 1);
+  });
+  
+  
+  if(this.month) {
+    this.oldMonth = this.month;
+    this.oldMonth.className = 'month out ' + (self.next ? 'next' : 'prev');
+    this.oldMonth.addEventListener('webkitAnimationEnd', function() {
+      self.oldMonth.parentNode.removeChild(self.oldMonth);
+      self.month = createElement('div', 'month');
+      self.backFill();
+      self.currentMonth();
+      self.fowardFill();
+      self.el.appendChild(self.month);
+      window.setTimeout(function() {
+        self.month.className = 'month in ' + (self.next ? 'next' : 'prev');
+      }, 16);
+    });
+  } else {
+      this.month = createElement('div', 'month');
+      this.el.appendChild(this.month);
+      this.backFill();
+      this.currentMonth();
+      this.fowardFill();
+      this.month.className = 'month new';
+  }
+}
+
+Calendar.prototype.backFill = function() {
+  var clone = this.current.clone();
+  var dayOfWeek = clone.day();
+
+  if(!dayOfWeek) { return; }
+
+  clone.subtract('days', dayOfWeek+1);
+
+  for(var i = dayOfWeek; i > 0 ; i--) {
+    this.drawDay(clone.add('days', 1));
+  }
+}
+
+Calendar.prototype.fowardFill = function() {
+  var clone = this.current.clone().add('months', 1).subtract('days', 1);
+  var dayOfWeek = clone.day();
+
+  if(dayOfWeek === 6) { return; }
+
+  for(var i = dayOfWeek; i < 6 ; i++) {
+    this.drawDay(clone.add('days', 1));
+  }
+}
+
+Calendar.prototype.currentMonth = function() {
+  var clone = this.current.clone();
+
+  while(clone.month() === this.current.month()) {
+    this.drawDay(clone);
+    clone.add('days', 1);
+  }
+}
+
+Calendar.prototype.getWeek = function(day) {
+  if(!this.week || day.day() === 0) {
+    this.week = createElement('div', 'week');
+    this.month.appendChild(this.week);
+  }
+}
+
+Calendar.prototype.drawDay = function(day) {
+  var self = this;
+  this.getWeek(day);
+
+  //Outer Day
+  var outer = createElement('div', this.getDayClass(day));
+  outer.addEventListener('click', function() {
+    self.openDay(this);
+  });
+
+  //Day Name
+  var name = createElement('div', 'day-name', day.format('ddd'));
+
+  //Day Number
+  var number = createElement('div', 'day-number', day.format('DD'));
+
+
+  //Events
+  var events = createElement('div', 'day-events');
+  this.drawEvents(day, events);
+
+  outer.appendChild(name);
+  outer.appendChild(number);
+  outer.appendChild(events);
+  this.week.appendChild(outer);
+}
+
+Calendar.prototype.drawEvents = function(day, element) {
+  if(day.month() === this.current.month()) {
+    var todaysEvents = this.events.reduce(function(memo, ev) {
+      if(ev.date.isSame(day, 'day')) {
+        memo.push(ev);
+      }
+      return memo;
+    }, []);
+
+    todaysEvents.forEach(function(ev) {
+      var evSpan = createElement('span', ev.color);
+      element.appendChild(evSpan);
+    });
+  }
+}
+
+Calendar.prototype.getDayClass = function(day) {
+  classes = ['day'];
+  if(day.month() !== this.current.month()) {
+    classes.push('other');
+  } else if (today.isSame(day, 'day')) {
+    classes.push('today');
+  }
+  return classes.join(' ');
+}
+
+Calendar.prototype.openDay = function(el) {
+  var details, arrow;
+  var dayNumber = +el.querySelectorAll('.day-number')[0].innerText || +el.querySelectorAll('.day-number')[0].textContent;
+  var day = this.current.clone().date(dayNumber);
+
+  var currentOpened = document.querySelector('.details');
+
+  //Check to see if there is an open detais box on the current row
+  if(currentOpened && currentOpened.parentNode === el.parentNode) {
+    details = currentOpened;
+    arrow = document.querySelector('.arrow');
+  } else {
+    //Close the open events on differnt week row
+    //currentOpened && currentOpened.parentNode.removeChild(currentOpened);
+    if(currentOpened) {
+      currentOpened.addEventListener('webkitAnimationEnd', function() {
+        currentOpened.parentNode.removeChild(currentOpened);
+      });
+      currentOpened.addEventListener('oanimationend', function() {
+        currentOpened.parentNode.removeChild(currentOpened);
+      });
+      currentOpened.addEventListener('msAnimationEnd', function() {
+        currentOpened.parentNode.removeChild(currentOpened);
+      });
+      currentOpened.addEventListener('animationend', function() {
+        currentOpened.parentNode.removeChild(currentOpened);
+      });
+      currentOpened.className = 'details out';
+    }
+
+    //Create the Details Container
+    details = createElement('div', 'details in');
+
+    //Create the arrow
+    var arrow = createElement('div', 'arrow');
+
+    //Create the event wrapper
+
+    details.appendChild(arrow);
+    el.parentNode.appendChild(details);
+  }
+
+  var todaysEvents = this.events.reduce(function(memo, ev) {
+    if(ev.date.isSame(day, 'day')) {
+      memo.push(ev);
+    }
+    return memo;
+  }, []);
+
+  this.renderEvents(todaysEvents, details);
+
+  arrow.style.left = el.offsetLeft - el.parentNode.offsetLeft + 27 + 'px';
+}
+
+Calendar.prototype.renderEvents = function(events, ele) {
+  //Remove any events in the current details element
+  var currentWrapper = ele.querySelector('.events');
+  var wrapper = createElement('div', 'events in' + (currentWrapper ? ' new' : ''));
+
+  events.forEach(function(ev) {
+    var div = createElement('div', 'event');
+    var square = createElement('div', 'event-category ' + ev.color);
+    var span = createElement('span', '', ev.eventName);
+
+    div.appendChild(square);
+    div.appendChild(span);
+    wrapper.appendChild(div);
+  });
+
+  if(!events.length) {
+    var div = createElement('div', 'event empty');
+    var span = createElement('span', '', 'No Events');
+
+    div.appendChild(span);
+    wrapper.appendChild(div);
+  }
+
+  if(currentWrapper) {
+    currentWrapper.className = 'events out';
+    currentWrapper.addEventListener('webkitAnimationEnd', function() {
+      currentWrapper.parentNode.removeChild(currentWrapper);
+      ele.appendChild(wrapper);
+    });
+    currentWrapper.addEventListener('oanimationend', function() {
+      currentWrapper.parentNode.removeChild(currentWrapper);
+      ele.appendChild(wrapper);
+    });
+    currentWrapper.addEventListener('msAnimationEnd', function() {
+      currentWrapper.parentNode.removeChild(currentWrapper);
+      ele.appendChild(wrapper);
+    });
+    currentWrapper.addEventListener('animationend', function() {
+      currentWrapper.parentNode.removeChild(currentWrapper);
+      ele.appendChild(wrapper);
+    });
+  } else {
+    ele.appendChild(wrapper);
+  }
+}
+
+Calendar.prototype.drawLegend = function() {
+  var legend = createElement('div', 'legend');
+  var calendars = this.events.map(function(e) {
+    return e.calendar + '|' + e.color;
+  }).reduce(function(memo, e) {
+    if(memo.indexOf(e) === -1) {
+      memo.push(e);
+    }
+    return memo;
+  }, []).forEach(function(e) {
+    var parts = e.split('|');
+    var entry = createElement('span', 'entry ' +  parts[1], parts[0]);
+    legend.appendChild(entry);
+  });
+  this.el.appendChild(legend);
+}
+
+Calendar.prototype.nextMonth = function() {
+  this.current.add('months', 1);
+  this.next = true;
+  this.draw();
+}
+
+Calendar.prototype.prevMonth = function() {
+  this.current.subtract('months', 1);
+  this.next = false;
+  this.draw();
+}
+
+window.Calendar = Calendar;
+
+function createElement(tagName, className, innerText) {
+  var ele = document.createElement(tagName);
+  if(className) {
+    ele.className = className;
+  }
+  if(innerText) {
+    ele.innderText = ele.textContent = innerText;
+  }
+  return ele;
+}
+}();
+
+!function() {
+var data = [
+  { eventName: 'Lunch Meeting w/ Mark', calendar: 'Work', color: 'orange' },
+  { eventName: 'Interview - Jr. Web Developer', calendar: 'Work', color: 'orange' },
+  { eventName: 'Demo New App to the Board', calendar: 'Work', color: 'orange' },
+  { eventName: 'Dinner w/ Marketing', calendar: 'Work', color: 'orange' },
+
+  { eventName: 'Game vs Portalnd', calendar: 'Sports', color: 'blue' },
+  { eventName: 'Game vs Houston', calendar: 'Sports', color: 'blue' },
+  { eventName: 'Game vs Denver', calendar: 'Sports', color: 'blue' },
+  { eventName: 'Game vs San Degio', calendar: 'Sports', color: 'blue' },
+
+  { eventName: 'School Play', calendar: 'Kids', color: 'yellow' },
+  { eventName: 'Parent/Teacher Conference', calendar: 'Kids', color: 'yellow' },
+  { eventName: 'Pick up from Soccer Practice', calendar: 'Kids', color: 'yellow' },
+  { eventName: 'Ice Cream Night', calendar: 'Kids', color: 'yellow' },
+
+  { eventName: 'Free Tamale Night', calendar: 'Other', color: 'green' },
+  { eventName: 'Bowling Team', calendar: 'Other', color: 'green' },
+  { eventName: 'Teach Kids to Code', calendar: 'Other', color: 'green' },
+  { eventName: 'Startup Weekend', calendar: 'Other', color: 'green' }
+];
+
+
+
+function addDate(ev) {
+  
+}
+
+var calendar = new Calendar('#calendar', data);
+
+}();
+
+
+</script>
+
+
+
+
+
+
+</body>
+</html>
+
+

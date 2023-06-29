@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="http://www.google.com" id="myForm">
+        <input name="arg1" id="mytext" type="text">
+        <input type="button" id="mybutton" value="submit">
+    </form>
+    <script>
+        let validation = false;
+        const metaCharacters = "?_+[]:;|'\"#{},./~$\\<>@!%^&*()`-=";
+        const numbers = "0123456789";
+
+        function containsMetaCharacter(s) {
+            for (let i = 0; i < metaCharacters.length; i++) {
+                if (s.indexOf(metaCharacters[i]) > -1) return true;
+            }
+            return false;
+        }
+
+        function containsTwoDifferentNumbers(s) {
+            let seen = {};
+            let count = 0;
+            for (let i = 0; i < s.length; i++) {
+                if (count >= 2) {
+                    break;
+                }
+
+                if (numbers.indexOf(s[i]) > -1 && !(s[i] in seen)) {
+                    count++;
+                }
+            }
+            if (count >= 2) {
+                return true;
+            }
+            return false;
+        }
+        let validate = (e) => {
+            let val = e.target.value;
+            if (val.length !== 11) {
+                validation = false;
+                console.log("not enough length")
+                return;
+            }
+
+            if (!containsMetaCharacter(val)) {
+                validation = false;
+                console.log("not enough metacharacters")
+                return;
+            }
+            if (!containsTwoDifferentNumbers(val)) {
+                validation = false;
+                console.log("not enough different numbers")
+                return;
+            }
+            console.log("validation success");
+            validation = true;
+        }
+
+        function handleSubmit(e) {
+            if (validation) {
+                document.forms["myForm"].submit();
+            }
+        }
+        document.body.onload = () => {
+            document.getElementById("mytext").onchange = validate;
+            document.getElementById("mybutton").onclick = handleSubmit;
+
+        }
+    </script>
+</body>
+
+</html>
